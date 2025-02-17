@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Search Records">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" label="Search" placeholder="Enter search text..." 
+                onchange={handleSearch}></lightning-input>
+            
+            <template if:true={records.length}>
+                <lightning-datatable 
+                    key-field="Id"
+                    data={records}
+                    columns={columns}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>
